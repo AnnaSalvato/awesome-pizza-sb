@@ -4,6 +4,9 @@ import org.springframework.http.HttpStatus;
 
 import java.time.LocalDateTime;
 
+/**
+ * Class to represent the error data
+ */
 public class ApiError {
 
 	private HttpStatus status;
@@ -44,5 +47,13 @@ public class ApiError {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 }

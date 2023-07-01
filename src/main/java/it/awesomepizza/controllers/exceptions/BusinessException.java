@@ -1,5 +1,8 @@
 package it.awesomepizza.controllers.exceptions;
 
+/**
+ * Custom exception
+ */
 public class BusinessException extends Exception {
 
 	public BusinessException() {}
