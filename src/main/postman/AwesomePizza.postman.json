@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "da589ea9-5c71-4ab1-b68b-4063c15e0579",
+		"name": "AwesomePizza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16674677"
+	},
+	"item": [
+		{
+			"name": "CreateOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user3\",\r\n    \"pizzas\": [\r\n        {\r\n            \"ingredients\": [\"mozzarella\", \"origan\"]\r\n        },\r\n        {\r\n            \"ingredients\": [\"tomatoe\", \"mozzarella\", \"salami\"]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/order",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/order/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"order",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllOpenedOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/order/opened",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"order",
+						"opened"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindOrderInProgress",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/order/inprogress",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"order",
+						"inprogress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetOlderOrderToInProgress",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/order/older-in-progress",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"order",
+						"older-in-progress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetOrderToInProgress",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/order/503/in-progress",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"order",
+						"503",
+						"in-progress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CompleteInProgressOrder",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/order/complete-in-progress",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"order",
+						"complete-in-progress"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
